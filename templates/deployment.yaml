@@ -6,8 +6,9 @@ metadata:
     app: nginx
     demo: helm
 spec:
-  # replicas: {{ .Values.deployment.replicas }}
-  replicas: 3 
+# helm goes into values.yaml and replaces the values with the values in values.yaml
+  replicas: {{ .Values.deployment.replicas }}
+  # replicas: 3 
   selector:
     matchLabels:
       app: nginx
