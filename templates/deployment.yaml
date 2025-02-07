@@ -21,7 +21,8 @@ spec:
     spec:
       containers:
       - name: nginx
-        # image: "nginx:{{ .Values.deployment.imageVersion }}"
-        image: nginx
+        # if number no need of double quotes if string need double quotes
+        image: "nginx:{{ .Values.deployment.imageVersion }}"
+        # image: nginx
         ports:
         - containerPort: 80
